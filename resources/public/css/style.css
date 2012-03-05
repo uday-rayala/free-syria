@@ -1,0 +1,40 @@
+body {
+	font-family: "Georgia";
+	border-top: 3px solid #b34924;
+	background-image: url('/img/gradient.png');
+	background-repeat: repeat-x;
+}
+
+div#wrapper {
+	margin: 0 auto;
+	width: 720px;
+}
+
+div#header {
+	margin: 0 auto;
+}
+
+div#header ul {
+	list-style: none;
+}
+
+div#header ul li {
+	padding-bottom: 5px;
+	color: #999999;
+}
+
+div#header img {
+	float: left;
+}
+
+div#header-menu {
+	float: right;
+	width: 50px;
+	position: relative;
+	left: -15px;
+	top: 10px;
+}
+
+div#stage {
+	clear: both;
+}
