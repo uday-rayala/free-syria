@@ -14,17 +14,26 @@ div#header {
 	margin: 0 auto;
 }
 
+div#header img {
+	float: left;
+}
+
 div#header ul {
 	list-style: none;
 }
 
 div#header ul li {
 	padding-bottom: 5px;
-	color: #999999;
+	color: #888888;
 }
 
-div#header img {
-	float: left;
+div#header a:link, a:visited {
+	text-decoration:  none;
+	color:            #888888;
+}
+
+div#header a:hover {
+	font-weight: bold;
 }
 
 div#header-menu {
@@ -37,4 +46,30 @@ div#header-menu {
 
 div#stage {
 	clear: both;
+	padding-top: 20px;
+}
+
+div#about {
+	padding-top: 30px;
+	padding-left: 50px;
+}
+
+div#video-screen {
+	position: absolute;
+	display: none;
+	width: 640px;
+	height: 360px;
+}
+
+.left {
+	float: left;
+}
+
+.right {
+	float: right;
+}
+
+.thumbnail {
+	width: 240px;
+	height: 180px;
 }
