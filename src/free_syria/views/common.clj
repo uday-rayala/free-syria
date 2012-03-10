@@ -22,8 +22,9 @@
      (include-css "/css/reset.css")
      (include-css "/css/style.css")
      (include-js "/js/jquery-1.7.1.min.js")
-     (include-js "/js/flowplayer-3.2.6.min.js")
-     (include-js "/js/video-grid.js")
+     (include-js "/js/flowplayer-3.2.8.min.js")
+     (include-js "/js/jquery.isotope.min.js")
+     (include-js "/js/main.js")
      ]
     [:body
      [:div#wrapper

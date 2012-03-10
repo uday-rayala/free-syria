@@ -1,6 +1,6 @@
 (ns free-syria.server
   (:require [noir.server :as server])
-  (:import [java.util.concurrent Executors])
+  (:import [java.util.concurrent Executors]))
 
 (server/load-views "src/free_syria/views/")
 
