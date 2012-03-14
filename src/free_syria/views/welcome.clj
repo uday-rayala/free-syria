@@ -20,6 +20,19 @@
                                    :video "http://c307100.r0.cf1.rackcdn.com/Sequence 52.m4v"}]])
 
 (defpage "/" []
+  (html5
+    [:head
+     [:title "Free Syria"]
+     (include-css "/css/reset.css")
+     (include-css "/css/style.css")
+     (include-js "/js/jquery-1.7.1.min.js")
+     ]
+    [:body
+     [:div#wrapper
+      [:img {:src "/img/landing.png"}]
+      [:p "Under Construction"]]]))
+
+(defpage "/live" []
          (common/layout
            [:div#video-screen ]
            (photo-grid)))
