@@ -12,8 +12,16 @@ div#wrapper {
 
 div#landing {
 	margin: 0 auto;
-	width: 150px;
+	width: 400px;
 	padding-top: 200px;
+}
+
+div#landing h3 {
+	font-size: 120%;
+}
+
+.smallprint {
+	font-size: 80%;
 }
 
 div#header {

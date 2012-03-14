@@ -31,7 +31,10 @@
      [:div#wrapper
       [:div#landing
        [:img {:src "/img/landing.png"}]
-       [:h4 "Under Construction"]]]]))
+       [:h3 "Please email your video declarations to:"]
+       [:p "&nbsp; voices@isupportthesyrianrevolution.com"]
+       [:p ""]
+       [:p.smallprint "(compressed m4v video only, 2 megabytes or less)"]]]]))
 
 (defpage "/live" []
          (common/layout
