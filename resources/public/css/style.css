@@ -10,6 +10,12 @@ div#wrapper {
 	width: 720px;
 }
 
+div#landing {
+	margin: 0 auto;
+	width: 150px;
+	padding-top: 200px;
+}
+
 div#header {
 	margin: 0 auto;
 }

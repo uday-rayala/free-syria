@@ -29,8 +29,9 @@
      ]
     [:body
      [:div#wrapper
-      [:img {:src "/img/landing.png"}]
-      [:p "Under Construction"]]]))
+      [:div#landing
+       [:img {:src "/img/landing.png"}]
+       [:h4 "Under Construction"]]]]))
 
 (defpage "/live" []
          (common/layout
