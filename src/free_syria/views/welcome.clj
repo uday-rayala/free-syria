@@ -32,9 +32,7 @@
       [:div#landing
        [:img {:src "/img/landing.png"}]
        [:h3 "Please email your video declarations to:"]
-       [:p "&nbsp; voices@isupportthesyrianrevolution.com"]
-       [:p ""]
-       [:p.smallprint "(compressed m4v video only, 2 megabytes or less)"]]]]))
+       [:p "&nbsp; voices@isupportthesyrianrevolution.com"]]]]))
 
 (defpage "/live" []
          (common/layout
