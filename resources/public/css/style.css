@@ -60,6 +60,7 @@ div#header-menu {
 
 div#stage {
 	clear: both;
+	width: 800px;
 	padding-top: 20px;
 }
 

@@ -5,24 +5,22 @@
   (:use noir.core
         hiccup.core
         hiccup.page-helpers
+        free-syria.thumbnails
         [clojure.java.io :only (file)]))
 
 (def THUMBNAIL-PATH "resources/public/img/thumbnails/")
 (def LOCAL-PREFIX "/img/thumbnails")
 (def CDN-PREFIX "http://c309575.r75.cf1.rackcdn.com/")
 
+
 (defn get-thumbnails
   [path]
   (map #(str CDN-PREFIX %)
        (filter #(re-find #".*\.jpg" %)
-               (map #(.getName %) 
+               (map #(.getName %)
                     (file-seq (file THUMBNAIL-PATH))))))
 
 (def images (get-thumbnails THUMBNAIL-PATH))
-
-(defn random-image []
-  {:url (rand-nth images)
-   :dimensions [240 180]})
 
 (defn images-json
   []
@@ -33,7 +31,7 @@
          images))
 
 (defpage "/images.json" []
-         (json/json-str {:images (images-json)}))
+         (json/json-str {:images (thumbnail-maps)}))
 
 (defpage "/about" []
          (common/layout
