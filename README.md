@@ -28,7 +28,7 @@ pw: changeit
 
 ## License
 
-Copyright (C) 2011 Jeff Rose, Andrew Whitehouse
+Copyright (C) 2011 Jeff Rose, Andrew Whitehouse, Udayakumar Rayala
 
 Distributed under the Eclipse Public License, the same as Clojure.
 
