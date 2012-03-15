@@ -84,6 +84,8 @@ div#video-screen {
 }
 
 .thumbnail {
-	width: 240px;
-	height: 180px;
+	float: left;
 }
+
+.thumbnail:nth-child(even) {background: #999999}
+.thumbnail:nth-child(odd) {background: #CCCCCC}
