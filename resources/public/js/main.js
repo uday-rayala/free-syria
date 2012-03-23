@@ -35,15 +35,14 @@ function setup_faces() {
     });
 }
 
-function setup_video_player() {
+function setup_video_player(video_url) {
   var mediaArray = [];
 
   var jp = flowplayer("video-screen",
    {
-  	// src: "flowplayer-3.2.7.swf"
-  	src: "flowplayer.commercial-3.2.7.swf"
+  	src: "flowplayer-3.2.7.swf"
+//  	src: "flowplayer.commercial-3.2.7.swf"
    },
-
    {
 	   key : "#$5c6ff561a7d689aac88",
        logo : null,
@@ -51,47 +50,55 @@ function setup_video_player() {
        log : { level  : 'warn' },
        clip :
        {
-		   autoPlay: false,
+           url: video_url,
+           autoPlay: true,
            provider: 'akamai',
            type : 'video',
-         },
-         scaling :
-         {
-         	//scale:'half'
-         },
-         	playlist: [],
-         	plugins:
-         {
-         	controls: null,
-         	/*
-         	   {
-         	   url: 'flowplayer.controls-3.2.5.swf',
-         	   },
-         	   */
-         	akamai:
-         	{
-         		url: 'AkamaiFlowPlugin.swf'
-         	}
-         },
-	  onFinish: function() {
-		$f(0).stop();
-		$('div#video-screen').hide();
-	}
-  }
-  );
+       },
+
+       scaling :
+       {
+            //scale:'half'
+       },
+
+       playlist: [],
+       plugins:
+       {
+            controls: null,
+            /*
+               {
+               url: 'flowplayer.controls-3.2.5.swf',
+               },
+               */
+            akamai:
+            {
+                url: 'AkamaiFlowPlugin.swf'
+            }
+       },
+      onFinish: function() { stop_video(); }
+  });
+}
+
+function stop_video() {
+    $f(0).stop();
+    $('div#video-container').hide();
+    $('div#video-screen').hide();
 }
 
 function setup_thumbnail_triggers() {
 	$('img.thumbnail').on('click', function() {
-		$('div#video-screen').show();
+		$('div#video-container').show();
+        $('div#video-screen').show();
+
 		var video = $(this).attr('video');
-		$f(0).play([{url: video}]);
+		setup_video_player(video);
 	});
 }
 
-$(document).ready(
-		function() {
-			setup_faces();
-			setup_video_player();
-			setup_thumbnail_triggers();
-		});
+$(document).ready(function() {
+    setup_faces();
+    setup_thumbnail_triggers();
+    $('#video-container').on('click', function() {
+        stop_video();
+    });
+});

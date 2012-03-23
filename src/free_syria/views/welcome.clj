@@ -62,6 +62,6 @@
 
 (defpage "/live" []
          (common/layout
-           [:div#video-screen ]
+           [:div#video-container] [:div#video-screen]
            (photo-grid)))
 
